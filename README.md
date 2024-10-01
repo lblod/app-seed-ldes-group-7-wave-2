@@ -16,7 +16,7 @@ We seed our Virtuso Graph Database using a [LDIO pipeline](./workbench/client-pi
 ./seed.sh
 ```
 
-We can follow the process in [Grafana](http://localhost:3000) (login using the configured [credentials](./.env)) by using the [IPDC dashboard](./grafana/IPDC-dashboard.json). We can import this dashboard after we create a data source for the prometheus service (http://prometheus:9090). 
+We can follow the process in [Grafana](http://localhost:3000) (login using the configured [credentials](./.env)) by using the [IPDC dashboard](./grafana/IPDC-dashboard.json). We can import this dashboard after we create a data source for the prometheus service (http://prometheus:9090). The actual data can be found in the Virtuoso [SPARQL](http://localhost:8890/sparql) endpoint.
 
 
 ## Tear Down
