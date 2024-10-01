@@ -15,6 +15,3 @@ for file in $DATA/* ; do sed -i "s|https://ipdc.tni-vlaanderen.be/doc/instanties
 
 # start all systems
 docker compose up -d --wait
-
-# # configure graph repository
-# curl -X PUT http://localhost:8082/rdf4j-server/repositories/ipdc -H "Content-Type: text/turtle" --data-binary @./rdf4j/ipdc-repository.ttl
