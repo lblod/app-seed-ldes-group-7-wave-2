@@ -1,0 +1,23 @@
+name: client-pipeline
+description: "Replicates & synchronizes a LDES view and sends each member to a virtuoso"
+
+input:
+  name: Ldio:LdesClient
+  config:
+    urls: 
+      - http://ldes-server:8080/pageNumber=0
+    sourceFormat: application/ld+json
+
+outputs:
+  # - name: Ldio:RepositorySink # store in our graph database
+  #   config:
+  #     sparql-host: http://rdf4j:8080/rdf4j-server
+  #     repository-id: ipdc
+  #     named-graph: http://example.com
+  #     batch-size: 25
+  #     batch-timeout: 50
+  - name: Ldio:HttpOut
+    config:
+      endpoint: http://rdf-seeder/rdf
+      rdf-writer:
+        content-type: application/n-triples

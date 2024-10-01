@@ -1,0 +1,4 @@
+logging:
+  level:
+    root: INFO
+    be.vlaanderen.informatievlaanderen.ldes: DEBUG
